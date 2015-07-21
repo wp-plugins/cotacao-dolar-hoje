@@ -4,7 +4,7 @@
 	Plugin Name: Cotação Dólar
 	Plugin URI: http://www.cotacaocolarhoje.com
 	Description: Tenha a cotação do dólar em seu site - atualizado diariamente direto do site do Banco Central.
-	Version: 2.0
+	Version: 2.1
 	Author: Fernando Becker
 	Author URI: http://www.fernandobecker.com.br
 	License: GPLv2
@@ -39,7 +39,7 @@ class cotaocaDolar extends WP_Widget{
 	
 	}
 
-	public function widget($argumentos, $instancia) {		
+	public function widget($args, $instancia) {		
 		
 		self::getjson();
 		
@@ -59,6 +59,8 @@ class cotaocaDolar extends WP_Widget{
                 </div>
 			</div>
             <?
+			
+			echo $args['after_widget'];
 		
 		endif;
 		
